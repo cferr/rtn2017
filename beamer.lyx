@@ -91,7 +91,7 @@
 status open
 
 \begin_layout Plain Layout
- Ce fichier est un exemple d'exposé:
+Ce fichier est un exemple d'exposé:
 \end_layout
 
 \begin_layout Itemize
@@ -156,7 +156,7 @@ Correction mineure (style Institute au lieu de style Date) des fichiers
 \end_layout
 
 \begin_layout Title
-Design of FIR filters for Multi-microphone array
+Probabilistic Estimation of End-to-End Path Latency in Wireless Sensor Networks
 \end_layout
 
 \begin_layout Author
@@ -377,7 +377,6 @@ si un détail qui est vital pour une preuve/mise en oeuvre est omis,  le
 
 \end_deeper
 \begin_layout Standard
-\start_of_appendix
 \begin_inset Separator plain
 \end_inset
 
@@ -389,7 +388,7 @@ si un détail qui est vital pour une preuve/mise en oeuvre est omis,  le
 status open
 
 \begin_layout Plain Layout
-A sample slide
+Overview
 \end_layout
 
 \end_inset
@@ -409,7 +408,7 @@ status open
 
 \begin_layout Plain Layout
 
-.5
+.8
 \backslash
 columnwidth
 \end_layout
@@ -420,31 +419,43 @@ columnwidth
 \end_layout
 
 \begin_layout Itemize
-Overlap Add
+Timeliness guarantees
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Filter length 
-\begin_inset Formula $l\ll s$
-\end_inset
-
- signal length
-\end_layout
-
-\begin_layout Itemize
-Division of the signal into blocks of length 
-\begin_inset Formula $p\equiv0\mod l$
-\end_inset
-
-
+Interesting in the context of Wireless Sensor Networks
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Needs to keep track of the remainder
+Classic methodologies have problems
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Energy-consuming
+\end_layout
+
+\begin_layout Itemize
+Over-constrained models
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A generalized timeliness notion
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Flexible
+\end_layout
+
+\begin_layout Itemize
+Focus on the capacity of a sequence of messages
+\end_layout
+
+\end_deeper
 \begin_layout Column
 \begin_inset ERT
 status open
@@ -461,15 +472,56 @@ columnwidth
 
 \end_layout
 
+\end_deeper
+\begin_layout ColumnsCenterAligned
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename Logo_EPFL.pdf
-	width 100col%
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Overview 2
+\end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+test
+\end_layout
+
+\begin_layout Standard
+ddd
+\end_layout
+
+\begin_layout Itemize
+sss
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+sss
+\end_layout
+
+\begin_layout Itemize
+sss
 \end_layout
 
 \end_deeper
