@@ -91,7 +91,7 @@
 status open
 
 \begin_layout Plain Layout
-Ce fichier est un exemple d'exposé:
+ Ce fichier est un exemple d'exposé:
 \end_layout
 
 \begin_layout Itemize
@@ -156,7 +156,7 @@ Correction mineure (style Institute au lieu de style Date) des fichiers
 \end_layout
 
 \begin_layout Title
-Probabilistic Estimation of End-to-End Path Latency in Wireless Sensor Networks
+Probabilistic estimation of End-to-End Path Latency in Wireless Sensor Networks
 \end_layout
 
 \begin_layout Author
@@ -234,35 +234,9 @@ Date
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hfill
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename Logo_EPFL.pdf
 	height 1cm
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hfill
-\end_layout
 
 \end_inset
 
@@ -388,7 +362,7 @@ si un détail qui est vital pour une preuve/mise en oeuvre est omis,  le
 status open
 
 \begin_layout Plain Layout
-Overview
+plop
 \end_layout
 
 \end_inset
@@ -397,20 +371,31 @@ Overview
 \end_layout
 
 \begin_deeper
-\begin_layout ColumnsCenterAligned
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename WSN_base.pdf
+	width 70col%
+
+\end_inset
+
 
 \end_layout
 
-\begin_deeper
-\begin_layout Column
-\begin_inset ERT
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-
-.8
-\backslash
-columnwidth
+plop
 \end_layout
 
 \end_inset
@@ -418,53 +403,32 @@ columnwidth
 
 \end_layout
 
-\begin_layout Itemize
-Timeliness guarantees
-\end_layout
-
 \begin_deeper
-\begin_layout Itemize
-Interesting in the context of Wireless Sensor Networks
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename WSN_deltaphi.pdf
+	width 70col%
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Classic methodologies have problems
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Energy-consuming
-\end_layout
-
-\begin_layout Itemize
-Over-constrained models
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-A generalized timeliness notion
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Flexible
-\end_layout
-
-\begin_layout Itemize
-Focus on the capacity of a sequence of messages
-\end_layout
-
-\end_deeper
-\begin_layout Column
-\begin_inset ERT
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-
-.5
-\backslash
-columnwidth
+plop
 \end_layout
 
 \end_inset
@@ -472,8 +436,95 @@ columnwidth
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename EWMA.pdf
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
-\begin_layout ColumnsCenterAligned
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+plop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename e2e_delay_5.png
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename e2e_delay_10.png
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+plop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename cdf_rp_5.png
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pdf_rp_5.png
+	width 45col%
+
+\end_inset
+
 
 \end_layout
 
@@ -494,7 +545,7 @@ columnwidth
 status open
 
 \begin_layout Plain Layout
-Overview 2
+plop
 \end_layout
 
 \end_inset
@@ -504,24 +555,161 @@ Overview 2
 
 \begin_deeper
 \begin_layout Standard
-test
+\align center
+\begin_inset Graphics
+	filename cdf_rp_10.png
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pdf_rp_10.png
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+plop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename table_results_rp5.png
+	width 80col%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-ddd
+\align center
+\begin_inset Graphics
+	filename table_results_rp10.png
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+A sample slide
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ColumnsCenterAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.5
+\backslash
+columnwidth
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-sss
+Overlap Add
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-sss
+Filter length 
+\begin_inset Formula $l\ll s$
+\end_inset
+
+ signal length
 \end_layout
 
 \begin_layout Itemize
-sss
+Division of the signal into blocks of length 
+\begin_inset Formula $p\equiv0\mod l$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Needs to keep track of the remainder
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.5
+\backslash
+columnwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Logo_EPFL.pdf
+	width 100col%
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
