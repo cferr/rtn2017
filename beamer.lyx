@@ -350,11 +350,8 @@ si un détail qui est vital pour une preuve/mise en oeuvre est omis,  le
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Section
+Introduction
 \end_layout
 
 \begin_layout Frame
@@ -362,7 +359,7 @@ si un détail qui est vital pour une preuve/mise en oeuvre est omis,  le
 status open
 
 \begin_layout Plain Layout
-plop
+Wireless Sensor Networks
 \end_layout
 
 \end_inset
@@ -375,7 +372,7 @@ plop
 \align center
 \begin_inset Graphics
 	filename WSN_base.pdf
-	width 70col%
+	width 90col%
 
 \end_inset
 
@@ -395,7 +392,328 @@ plop
 status open
 
 \begin_layout Plain Layout
-plop
+Wireless Sensor Networks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename WSN_base2.pdf
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Notion of timeliness
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Timeliness = guarantees
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Time intervals for arrival
+\end_layout
+
+\begin_layout Itemize
+Level of confidence
+\end_layout
+
+\begin_layout Itemize
+Quality of service
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Doesn't fit WSNs
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Energy limits data rate
+\end_layout
+
+\begin_layout Itemize
+Constraints too strong
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Related work
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O.
+ Chipara [cite], T.
+ He [cite], A.
+ Sahoo [cite] : assumptions on message speed and topology of the network
+ to deduce hop number limits
+\end_layout
+
+\begin_layout Itemize
+K.
+ Karenos [cite], L.
+ Abeni [cite], E.
+ Felemban [cite] : probailistically computed deadlines are strictly enforced
+ by dropping out-of-time packets
+\end_layout
+
+\begin_layout Itemize
+S.
+ Gobriel [cite] : use of TDMA (shedule construction), does not fit error-prone
+ and mobile environments
+\end_layout
+
+\begin_layout Itemize
+T.
+ Abdelzaher [cite] : exact computation of arrival times is not possible
+ with WSNs
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Hypotheses and constraints
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our goal : a probabilistic estimation of the end-to-end latency
+\end_layout
+
+\begin_layout Itemize
+WSN-related assumptions:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Each node can estimate likelihood of deadline meeting
+\end_layout
+
+\begin_layout Itemize
+No full connectivity
+\end_layout
+
+\begin_layout Itemize
+Limited computational resources on each node
+\end_layout
+
+\begin_layout Itemize
+Variable network conditions (topology)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+We will do statistical analysis at each node
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Requirements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Performance should be achievable
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+i.e.
+ the model has to be small enough to run on WSs
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The model should be more fine-grained than 
+\begin_inset Quotes fld
+\end_inset
+
+success / failure
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+i.e.
+ we want a continuous function that models the probability of success
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A confidence indicator should be given with the estimated deadlines
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Definitions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Generalized notion of timeliness
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+applies to a 
+\series bold
+sequence of messages
+\series default
+ 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+each sequence 
+\begin_inset Formula $M$
+\end_inset
+
+ has a 
+\series bold
+runtime interval
+\series default
+ 
+\begin_inset Formula $\left[t_{i},t_{j}\right]$
+\end_inset
+
+ with 
+\series bold
+confidence
+\series default
+ 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ on its bounds
+\end_layout
+
+\begin_layout Itemize
+the 
+\series bold
+end-to-end delay
+\series default
+ is a distribution function 
+\begin_inset Formula $D_{e2e}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Wireless sensor networks (2)
 \end_layout
 
 \end_inset
@@ -408,7 +726,7 @@ plop
 \align center
 \begin_inset Graphics
 	filename WSN_deltaphi.pdf
-	width 70col%
+	width 90col%
 
 \end_inset
 
@@ -428,7 +746,116 @@ plop
 status open
 
 \begin_layout Plain Layout
-plop
+Simple case : with an EWMA estimator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The path 
+\begin_inset Formula $\left(\mathrm{hop}_{1},\mathrm{hop}_{2}\right)$
+\end_inset
+
+ is run with 
+\begin_inset Formula $\delta_{\mathrm{hop}_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Thus 
+\begin_inset Formula $D_{e2e}=\sum_{i=0}^{\textrm{path length}}\delta_{\mathrm{hop}_{i}},\delta_{\mathrm{hop}_{i+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $D_{e2e}$
+\end_inset
+
+ is a 
+\series bold
+random variable
+\end_layout
+
+\begin_layout Itemize
+Assumption: 
+\begin_inset Formula $D_{e2e}$
+\end_inset
+
+ has a mean 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and a variance 
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We estimate with samples : mean 
+\begin_inset Formula $\overline{x}$
+\end_inset
+
+, variance 
+\begin_inset Formula $\overline{s}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Exponential Weighted Moving Average estimator:
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+\overline{x}_{t}^{*}=\alpha\delta_{t}+\left(1-\alpha\right)\overline{x}_{t-1} & \overline{s}_{t}^{*}=\frac{\alpha}{2-\alpha}s_{t}^{2}\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+EWMA requires no sample history
+\begin_inset Formula 
+\[
+\begin{cases}
+\overline{x}_{t+1}^{*}=\alpha\delta_{t+1}+\left(1-\alpha\right)\overline{x}_{t}\\
+s_{t+1}^{2}=\frac{t}{t+1}s_{t}^{2}+\frac{1}{t}\left(\delta_{t+1}-\overline{x}_{t+1}\right)^{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exponential Weighted Moving Average
 \end_layout
 
 \end_inset
@@ -461,7 +888,168 @@ plop
 status open
 
 \begin_layout Plain Layout
-plop
+General case : without EWMA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We rely on the 
+\series bold
+central limit theorem
+\end_layout
+
+\begin_layout Itemize
+Suppose that we have a large number of samples of 
+\begin_inset Formula $D_{e2e}$
+\end_inset
+
+ : 
+\begin_inset Formula $\left(D_{k}\right)_{k=1\dots N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+When 
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\sum_{k=1}^{N}D_{k}=D_{rp}\sim\mathcal{N}\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+ for some 
+\begin_inset Formula $\mu$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+By the CLT, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the same as the estimate from the samples
+\end_layout
+
+\begin_layout Itemize
+This is also valid for 
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Hypotheses:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Quasi-independence of the samples of 
+\begin_inset Formula $\left(D_{e2e}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+All 
+\begin_inset Formula $D_{e2e}$
+\end_inset
+
+ samples follow the same distribution
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Experiment parameters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Path length : 
+\begin_inset Formula $\left|rp\right|=5,10$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+One message sent into the network every 
+\begin_inset Formula $T=30$
+\end_inset
+
+ s
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha=0.9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Cross-traffic follows a Poisson distribution with 
+\begin_inset Formula $\lambda\in\left\{ 30\text{ s},60\text{ s},120\text{ s},480\text{ s},1200\text{ s}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Distance between nodes : uniformly distributed in 
+\begin_inset Formula $\left[8\text{ m},20\text{ m}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Experimental results
 \end_layout
 
 \end_inset
