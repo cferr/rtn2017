@@ -1227,59 +1227,7 @@ Discussion
 
 \begin_deeper
 \begin_layout Itemize
-Heavy tail on PDFs / CDFs : the estimator gives good results, but...
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename cdf_rp_10.png
-	width 45col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename pdf_rp_10.png
-	width 45col%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Discussion
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
 Wrong formula on EWMA variance
-\begin_inset Formula 
-\[
-PLOP
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -1287,7 +1235,7 @@ Determination of
 \begin_inset Formula $\alpha$
 \end_inset
 
-: we have no criteria
+: 
 \end_layout
 
 \end_deeper
