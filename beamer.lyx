@@ -279,86 +279,6 @@ beamerdefaultoverlayspecification{<+->}
 status open
 
 \begin_layout Plain Layout
-Outline
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Structurer l'exposé est une tâche difficile et la structure suivante pourrait
- ne pas convenir.
- Voici quelques règles à appliquer pour cet exemple ci :
-\end_layout
-
-\begin_layout Itemize
-avoir exactement deux ou trois sections (autre que le sommaire); 
-\end_layout
-
-\begin_layout Itemize
-tout au plus trois sous-sections par section; 
-\end_layout
-
-\begin_layout Itemize
-parler approximativement entre 30 secondes et 2 minutes par transparent.
- Il  devrait donc y avoir entre 15 et 30 transparents, pour tout dire;
-\end_layout
-
-\begin_layout Itemize
-le public d'une conférence connaîtra probablement peu de chose sur le sujet
-  que vous serez en train de traiter.
- Donc, *simplifier*
-\begin_inset space ~
-\end_inset
-
-!
-\end_layout
-
-\begin_layout Itemize
-dans un exposé de 20 minutes, garder à l'esprit les idées principales est
- largement  suffisant pour votre assistance.
- Laissez tomber certains détails, même s'ils vous  semblent nécessaires;
- 
-\end_layout
-
-\begin_layout Itemize
-si un détail qui est vital pour une preuve/mise en oeuvre est omis,  le
- dire simplement une fois.
- Ce sera suffisant pour l'auditoire.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Section
-Introduction
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Wireless Sensor Networks
 \end_layout
 
@@ -490,30 +410,85 @@ Related work
 \begin_deeper
 \begin_layout Itemize
 O.
- Chipara [cite], T.
- He [cite], A.
- Sahoo [cite] : assumptions on message speed and topology of the network
- to deduce hop number limits
+ Chipara 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "4015737"
+
+\end_inset
+
+, T.
+ He 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tian_He"
+
+\end_inset
+
+, A.
+ Sahoo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sahoo_2007"
+
+\end_inset
+
+ : assumptions on message speed and topology of the network to deduce hop
+ number limits
 \end_layout
 
 \begin_layout Itemize
 K.
- Karenos [cite], L.
- Abeni [cite], E.
- Felemban [cite] : probailistically computed deadlines are strictly enforced
- by dropping out-of-time packets
+ Karenos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Karenos_2006"
+
+\end_inset
+
+, L.
+ Abeni 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abeni"
+
+\end_inset
+
+, E.
+ Felemban 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Felemban"
+
+\end_inset
+
+ : probailistically computed deadlines are strictly enforced by dropping
+ out-of-time packets
 \end_layout
 
 \begin_layout Itemize
 S.
- Gobriel [cite] : use of TDMA (shedule construction), does not fit error-prone
- and mobile environments
+ Gobriel 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gobriel2008"
+
+\end_inset
+
+ : use of TDMA (shedule construction), does not fit error-prone and mobile
+ environments
 \end_layout
 
 \begin_layout Itemize
 T.
- Abdelzaher [cite] : exact computation of arrival times is not possible
- with WSNs
+ Abdelzaher 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Abdelzaher"
+
+\end_inset
+
+ : exact computation of arrival times is not possible with WSNs
 \end_layout
 
 \end_deeper
@@ -548,11 +523,11 @@ WSN-related assumptions:
 
 \begin_deeper
 \begin_layout Itemize
-Each node can estimate likelihood of deadline meeting
+Packets dropped if their end-to-end deadline isn't met
 \end_layout
 
 \begin_layout Itemize
-No full connectivity
+No full connectivity, thus no bounded delays
 \end_layout
 
 \begin_layout Itemize
@@ -565,7 +540,7 @@ Variable network conditions (topology)
 
 \end_deeper
 \begin_layout Itemize
-We will do statistical analysis at each node
+We will do statistical analysis at each node instead 
 \end_layout
 
 \end_deeper
@@ -597,7 +572,7 @@ Performance should be achievable
 \begin_deeper
 \begin_layout Itemize
 i.e.
- the model has to be small enough to run on WSs
+ applications should be have lighter demands than per-message
 \end_layout
 
 \end_deeper
@@ -646,6 +621,20 @@ Definitions
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+Regular timeliness
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+applies to individual messages
+\end_layout
+
+\begin_layout Itemize
+sets hop-by-hop deadlines
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Generalized notion of timeliness
 \end_layout
@@ -746,7 +735,7 @@ Wireless sensor networks (2)
 status open
 
 \begin_layout Plain Layout
-Simple case : with an EWMA estimator
+Simple case : One single hop
 \end_layout
 
 \end_inset
@@ -769,7 +758,7 @@ The path
 
 \begin_layout Itemize
 Thus 
-\begin_inset Formula $D_{e2e}=\sum_{i=0}^{\textrm{path length}}\delta_{\mathrm{hop}_{i}},\delta_{\mathrm{hop}_{i+1}}$
+\begin_inset Formula $D_{e2e}=\delta_{\mathrm{hop}_{1}}$
 \end_inset
 
 
@@ -819,7 +808,7 @@ Exponential Weighted Moving Average estimator:
 \begin_inset Formula 
 \[
 \begin{array}{cc}
-\overline{x}_{t}^{*}=\alpha\delta_{t}+\left(1-\alpha\right)\overline{x}_{t-1} & \overline{s}_{t}^{*^{2}}=\frac{\alpha}{2-\alpha}s_{t}^{2}\end{array}
+\overline{x}_{t}=\alpha\delta_{t}+\left(1-\alpha\right)\overline{x}_{t-1} & \overline{s}_{t}^{2}=\frac{\alpha}{2-\alpha}s_{t}^{2}\end{array}
 \]
 
 \end_inset
@@ -867,8 +856,41 @@ Exponential Weighted Moving Average
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename EWMA.pdf
-	width 70col%
+	filename EWMA_computation.pdf
+	height 7cm
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exponential Weighted Moving Average
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ewma1.pdf
+	width 100col%
 
 \end_inset
 
@@ -1271,10 +1293,14 @@ Discussion
 
 \begin_deeper
 \begin_layout Itemize
-Wrong formula on EWMA variance
+Wrong formula on EWMA variance : if 
+\begin_inset Formula $s_{t}^{2}=\sum_{i=0}^{t}x_{i}^{2}-\frac{1}{t}\left(\sum_{i=0}^{t}x_{i}\right)^{2}$
+\end_inset
+
+ then
 \begin_inset Formula 
 \[
-PLOP
+s_{t+1}^{2}=s_{t}^{2}+\frac{t}{t-1}\left(\delta_{t}-\overline{x_{t}}\right)
 \]
 
 \end_inset
@@ -1287,9 +1313,27 @@ Determination of
 \begin_inset Formula $\alpha$
 \end_inset
 
-: we have no criteria
+: we have no quantitative metric
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+We'd like to compensate the 
+\begin_inset Quotes fld
+\end_inset
+
+noise
+\begin_inset Quotes frd
+\end_inset
+
+ (imprecision on measurement)
+\end_layout
+
+\begin_layout Itemize
+But at the same time, keep track of the time variations
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1303,7 +1347,7 @@ Determination of
 status open
 
 \begin_layout Plain Layout
-A sample slide
+Conclusion and further work
 \end_layout
 
 \end_inset
@@ -1312,62 +1356,62 @@ A sample slide
 \end_layout
 
 \begin_deeper
-\begin_layout ColumnsCenterAligned
+\begin_layout Itemize
 
+\series bold
+Probabilistic
+\series default
+ approach to end-to-end time estimation
+\end_layout
+
+\begin_layout Itemize
+Expense : no single-hop per-message deadline (but 
+\series bold
+per-group end-to-end
+\series default
+)
+\end_layout
+
+\begin_layout Itemize
+Gain: 
+\series bold
+two models
+\series default
+ (single-hop, multi-hop)
+\end_layout
+
+\begin_layout Itemize
+Things that could be added:
 \end_layout
 
 \begin_deeper
-\begin_layout Column
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-.5
-\backslash
-columnwidth
-\end_layout
-
-\end_inset
-
-
+\begin_layout Itemize
+Handling missed ACK packets
 \end_layout
 
 \begin_layout Itemize
-Overlap Add
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Filter length 
-\begin_inset Formula $l\ll s$
+A clearer method for assessing 
+\begin_inset Formula $\alpha$
 \end_inset
 
- signal length
-\end_layout
-
-\begin_layout Itemize
-Division of the signal into blocks of length 
-\begin_inset Formula $p\equiv0\mod l$
-\end_inset
-
-
+ in EWMA
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Needs to keep track of the remainder
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
-\begin_layout Column
-\begin_inset ERT
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-
-.5
-\backslash
-columnwidth
+References
 \end_layout
 
 \end_inset
@@ -1376,17 +1420,15 @@ columnwidth
 \end_layout
 
 \begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename Logo_EPFL.pdf
-	width 100col%
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "beamer"
+options "bibtotoc,plain"
 
 \end_inset
 
 
 \end_layout
 
-\end_deeper
-\end_deeper
 \end_body
 \end_document

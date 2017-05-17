@@ -33,7 +33,7 @@ sigma_est = [alpha / (2 - alpha) * (w) for w in sigma]
 libplot.figure()
 libplot.plot(t, indata, ":")
 libplot.plot(t, mu[1:])
-libplot.plot(t, sigma_est[1:])
-libplot.legend(["Input", "Mu", "Sigma"])
+#libplot.plot(t, sigma_est[1:])
+libplot.legend(["Input", "Mu"])#, "Sigma"])
 
 libplot.show()
