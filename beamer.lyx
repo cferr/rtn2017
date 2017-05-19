@@ -219,7 +219,7 @@ optionnel, mais souvent nécessaire
 \end_layout
 
 \begin_layout Date
-May 23, 2017
+May 22, 2017
 \begin_inset Newline newline
 \end_inset
 
@@ -268,6 +268,105 @@ beamerdefaultoverlayspecification{<+->}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Vous pouvez, si vous le souhaitez ajouter l'option [pausesections]
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSubsection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Vous pouvez, si vous le souhaitez ajouter l'option [pausesections]
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
 \end_layout
 
 \begin_layout Frame
@@ -494,11 +593,12 @@ key "Abdelzaher"
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
+\begin_layout Section
+Proposals of estimators
+\end_layout
 
-
+\begin_layout Subsection
+Hypotheses and constraints
 \end_layout
 
 \begin_layout Frame
@@ -544,11 +644,11 @@ Our goal : a probabilistic estimation of the end-to-end latency
 WSN-related assumptions:
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 Packets dropped if their end-to-end deadline isn't met
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 No full connectivity, thus no bounded delays
 \end_layout
@@ -620,13 +720,11 @@ Requirements
 Performance should be achievable
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 i.e.
  applications should be have lighter demands than per-message
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 The model should be more fine-grained than 
 \begin_inset Quotes fld
@@ -676,11 +774,11 @@ Definitions
 Regular timeliness
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 applies to individual messages
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 sets hop-by-hop deadlines
 \end_layout
@@ -841,11 +939,8 @@ status open
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsection
+Specific case : single-hop path
 \end_layout
 
 \begin_layout Frame
@@ -1023,12 +1118,24 @@ Exponential Weighted Moving Average
 
 \end_layout
 
+\begin_layout Subsection
+General case : 
+\begin_inset Formula $k$
+\end_inset
+
+-hop path
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-General case : without EWMA
+General case: 
+\begin_inset Formula $k$
+\end_inset
+
+-hop path
 \end_layout
 
 \end_inset
@@ -1116,11 +1223,8 @@ All
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Section
+Experiment
 \end_layout
 
 \begin_layout Frame
@@ -1257,10 +1361,6 @@ Experimental results
 \end_layout
 
 \end_deeper
-\begin_layout Frame
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1453,11 +1553,8 @@ But at the same time, keep track of the time variations
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Section
+Conclusion
 \end_layout
 
 \begin_layout Frame
@@ -1524,24 +1621,22 @@ A clearer method for assessing
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-References
+
+
+\backslash
+begin{frame}[allowframebreaks]{Bibliography} 
+\backslash
+bibliographystyle{plain} 
+\backslash
+bibliography{beamer} 
+\backslash
+end{frame} 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "beamer"
-options "bibtotoc,plain"
 
 \end_inset
 
