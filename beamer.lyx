@@ -160,11 +160,7 @@ Probabilistic estimation of End-to-End Path Latency in Wireless Sensor Networks
 \end_layout
 
 \begin_layout Author
-A.
-\begin_inset space ~
-\end_inset
-
-Mouradian, C.
+C.
 \begin_inset space ~
 \end_inset
 
@@ -223,7 +219,7 @@ optionnel, mais souvent nécessaire
 \end_layout
 
 \begin_layout Date
-Date
+May 23, 2017
 \begin_inset Newline newline
 \end_inset
 
@@ -355,12 +351,18 @@ Notion of timeliness
 
 \begin_deeper
 \begin_layout Itemize
-Timeliness = guarantees
+The notion of timeliness defines a framework to guarantee 
+\series bold
+quality of service
+\end_layout
+
+\begin_layout Itemize
+Guarantees provided : 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Time intervals for arrival
+Time bounds for arrival between nodes, for each packet
 \end_layout
 
 \begin_layout Itemize
@@ -368,12 +370,12 @@ Level of confidence
 \end_layout
 
 \begin_layout Itemize
-Quality of service
+Quality of service indicator
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Doesn't fit WSNs
+This doesn't fit WSNs...
 \end_layout
 
 \begin_deeper
@@ -382,7 +384,7 @@ Energy limits data rate
 \end_layout
 
 \begin_layout Itemize
-Constraints too strong
+Its constraints are too strong
 \end_layout
 
 \end_deeper
@@ -513,6 +515,27 @@ Hypotheses and constraints
 \end_layout
 
 \begin_deeper
+\begin_layout ColumnsCenterAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.5
+\backslash
+columnwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 Our goal : a probabilistic estimation of the end-to-end latency
 \end_layout
@@ -543,6 +566,34 @@ Variable network conditions (topology)
 We will do statistical analysis at each node instead 
 \end_layout
 
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.5
+\backslash
+columnwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename WSN_base.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -711,10 +762,24 @@ Wireless sensor networks (2)
 \end_layout
 
 \begin_deeper
+\begin_layout Overprint
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename WSN_deltaphi.pdf
+	filename WSN_deltaphi_1.pdf
 	width 90col%
 
 \end_inset
@@ -722,6 +787,59 @@ Wireless sensor networks (2)
 
 \end_layout
 
+\end_deeper
+\begin_layout Overprint
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename WSN_deltaphi_2.pdf
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Overprint
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename WSN_deltaphi_3.pdf
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
