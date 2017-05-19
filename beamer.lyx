@@ -644,11 +644,11 @@ Our goal : a probabilistic estimation of the end-to-end latency
 WSN-related assumptions:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 Packets dropped if their end-to-end deadline isn't met
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 No full connectivity, thus no bounded delays
 \end_layout
@@ -720,11 +720,13 @@ Requirements
 Performance should be achievable
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 i.e.
  applications should be have lighter demands than per-message
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 The model should be more fine-grained than 
 \begin_inset Quotes fld
@@ -774,11 +776,11 @@ Definitions
 Regular timeliness
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 applies to individual messages
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 sets hop-by-hop deadlines
 \end_layout
@@ -1255,13 +1257,6 @@ One message sent into the network every
 \end_inset
 
  s
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\alpha=0.9$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
